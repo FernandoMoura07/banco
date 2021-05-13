@@ -1,0 +1,49 @@
+CREATE DATABASE usuarios;
+
+
+USE usuarios;
+
+
+CREATE TABLE clienteCadastro (
+
+nome VARCHAR(55) NOT NULL,
+id INT PRIMARY KEY,
+email VARCHAR(55) NOT NULL,
+senha VARCHAR(55) NOT NULL,
+idAdmin INT NOT NULL
+
+);
+
+
+
+CREATE TABLE adminCadastro (
+
+Nome VARCHAR(55) NOT NULL,
+Id INT PRIMARY KEY,
+Email 	VARCHAR(55) NOT NULL,
+Senha VARCHAR(55) NOT NULL
+
+);
+
+CREATE TABLE registroBanner (
+
+Id INT PRIMARY KEY,
+nomeBanner VARCHAR(55) NOT NULL,
+Preco INT NOT NULL,
+Descricao VARCHAR(255) NOT NULL
+
+
+);
+
+
+
+CREATE TABLE Pedido (
+
+Id INT PRIMARY KEY,
+idCliente INT NOT NULL,
+idAdmin INT NOT NULL,
+dataCompra DATE NOT NULL,
+idBanner INT NOT NULL
+
+);
+
